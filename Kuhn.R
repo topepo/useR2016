@@ -105,13 +105,8 @@ plot(as.party(rp3))
 ## on Windows, try the doParallel package
 ## **if** your computer has multiple cores and sufficient memory
 
-## NOTE: the code below should have been `repeats = 5` but left 
-## but was accidentally run with at `repeats = 1`. This was left 
-## to be consistent with the slides (althoug the plot y-axis labels
-## will say "Repeated Cross-Validation". 
-
 ctrl <- trainControl(method = "repeatedcv",
-                     repeats = 1, 
+                     repeats = 5, 
                      classProbs = TRUE,
                      savePredictions = TRUE,
                      summaryFunction = twoClassSummary)
